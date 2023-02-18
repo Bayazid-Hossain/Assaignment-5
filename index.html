@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geometry Genius</title>
+    <!-- daisy ui link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- tailwind css link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome css link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font family link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@800&family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <!-- custom css link -->
+    <link rel="stylesheet" href="custom.css">
+  </head>
+  <body class="max-w-[1900px] w-full mx-auto">
+    <main>
+      <section class="p-4 sm:p-12">
+        <!-- top part : Logo & blog button -->
+        <div class="sm:flex justify-between items-center bg-blue-100 p-6 rounded">
+          <div>
+            <h2 class="text-5xl font-medium text-[rgba(17, 17, 17, 0.8)]">
+              Interactive
+            </h2>
+            <h2 class="text-4xl font-medium text-gray-500">Geometry Genius</h2>
+          </div>
+          <div class="btn btn-primary mt-4 sm:mt-0">
+            <button>blog</button>
+          </div>
+        </div>
+        <!-- geometry Area -->
+        <div class="flex flex-col lg:flex-row py-12 gap-4">
+            <div class="w-full lg:w-4/6 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="card w-full bg-base-100 border-2">
+                    <figure class="px-10 pt-10">
+                      <img src="images/triangle.png" alt="" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title font-semibold text-[#414141]" id="title">Triangle</h2>
+                      <p>Area (A) = 0.5 x b x n</p>
+                      <div class="flex my-3">
+                        <input id="traingle-input1" type="text" class="border-2 rounded w-2/6 px-1" name="" id="" placeholder="b">
+                        <p>cm</p>
+                        <input id="traingle-input2" type="text" class="border-2 rounded w-2/6 px-1" name="" id="" placeholder="n">
+                        <p>cm</p>
+                      </div>
+                      <div class="w-full">
+                        <button class=" btn w-full btn-primary" id="trianlge-btn">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="card w-full bg-base-100 border-2">
+                    <figure class="px-10 pt-10">
+                      <img src="images/rectangle.png" alt="" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title font-semibold text-[#414141]">Rectangle</h2>
+                      <p>Area (A) = w x l</p>
+                      <div class="flex my-3">
+                        <input type="text" class="border-2 rounded w-2/6 px-1" name="" id="rectangle-input1" placeholder="w">
+                        <p>cm</p>
+                        <input type="text" class="border-2 rounded w-2/6 px-1" name="" id="rectangle-input2" placeholder="l">
+                        <p>cm</p>
+                      </div>
+                      <div class="w-full">
+                        <button class=" btn w-full btn-primary" id="rectangle-btn">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="card w-full bg-base-100 border-2">
+                    <figure class="px-10 pt-10">
+                      <img src="images/parallelogram.png" alt="" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title font-semibold text-[#414141]">Parallelogram</h2>
+                      <p>Area (A) = b x h</p>
+                      <p class="my-2">b=<span> 10 </span>cm, h=<span> 12 </span>cm <span class="ml-2 text-xl w-3" id=""><button class="edit btn edit">edit</button></span></p>
+                      <div class="my-3 hidden" id="inputFieldShow">
+                        <input type="text" class="border-2 rounded w-2/6 px-1" name="" id="" placeholder="b">
+                        <p>cm</p>
+                        <input type="text" class="border-2 rounded w-2/6 px-1" name="" id="" placeholder="h">
+                        <p>cm</p>
+                      </div>
+                      <div class="w-full">
+                        <button class=" btn w-full btn-primary">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="card w-full bg-base-100 border-2">
+                    <figure class="px-10 pt-10">
+                      <img src="images/rhombus.png" alt="" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title font-semibold text-[#414141]">Rhombus</h2>
+                      <p>Area (A) =0.5 x d<sub>1</sub> x d<sub>2</sub></p>
+                      <p class="my-2">d<sub>1</sub>=<span> 16 </span>cm, d<sub>2</sub>=<span> 8 </span>cm <span class="ml-2 text-xl" id="" ><button class="edit btn">edit</button></span></p>
+                      <div class="hidden my-3" id="">
+                        <input type="text" class="border-2 rounded w-2/6 px-1" name="" id="" placeholder="d1">
+                        <p>cm</p>
+                        <input type="text" class="border-2 rounded w-2/6 px-1" name="" id="" placeholder="d2">
+                        <p>cm</p>
+                      </div>
+                      <div class="w-full">
+                        <button class=" btn w-full btn-primary">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="card w-full bg-base-100 border-2">
+                    <figure class="px-10 pt-10">
+                      <img src="images/pentagon.png" alt="" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title font-semibold text-[#414141]">Pentagon</h2>
+                      <p>Area (A) =0.5 x p x b</p>
+                      <p class="my-2">p=<span> 6 </span>cm, b=<span> 10 </span>cm <span class="ml-2 text-xl edit" id=""><button class="edit btn">edit</button></span></p>
+                      <div class="hidden my-3" id="">
+                        <input type="text" class="border-2 rounded w-2/6 px-1" name="" id="" placeholder="p">
+                        <p>cm</p>
+                        <input type="text" class="border-2 rounded w-2/6 px-1" name="" id="" placeholder="b">
+                        <p>cm</p>
+                      </div>
+                      <div class="w-full">
+                        <button class=" btn w-full btn-primary">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="card w-full bg-base-100 border-2">
+                    <figure class="px-10 pt-10">
+                      <img src="images/ellipse.png" alt="" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title font-semibold text-[#414141]">Ellipse</h2>
+                      <p class="">Area (A) = <span><img style="width: 20px;" src="images/Pi-symbol.svg.png" class="w-3 inline-block" alt=""></span>ab</p>
+                      <p class="my-2">a=<span> 10 </span>cm, b=<span> 4 </span>cm <span class="ml-2 text-xl" id=""><button class="edit btn">edit</button></span></p>
+                      <div class="hidden my-3" id="">
+                        <input type="text" class="border-2 rounded w-2/6 px-1" name="" id="" placeholder="a">
+                        <p>cm</p>
+                        <input type="text" class="border-2 rounded w-2/6 px-1" name="" id="" placeholder="b">
+                        <p>cm</p>
+                      </div>
+                      <div class="w-full">
+                        <button class=" btn w-full btn-primary">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <!-- output show area -->
+            <div class="w-full lg:w-2/6">
+                <div class="card w-full bg-base-100 border-2 ">
+                    <div class="card-body items-center">
+                        <h2 class="card-title font-semibold text-[#414141] text-center underline mb-5">Area Calculation</h2>
+                        <div class="w-full text-sm sm:text-xl" id="calculator-container">
+                            <!-- <div class="flex justify-between items-center pb-5" id="calculate-item">
+                                <span>1. </span>
+                                <p>Traingle</p>
+                                <p><span id="final-result">12</span><span id="cm">cm</span><sup>2</sup></p>
+                                <button class="btn btn-primary lowercase converter" id="cm-to-m-btn">Convert to m<sup>2</sup></button>
+                            </div> -->
+                        </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- utility js link -->
+    <script src="utilitiy.js"></script>
+    <!-- geometry js -->
+    <script src="geometry.js"></script>
+    <!-- font awesome js link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js" integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </body>
+</html>
